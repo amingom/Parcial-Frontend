@@ -4,17 +4,23 @@
 
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
+import * as $_layout from "./routes/_layout.tsx";
+import * as $country_country_ from "./routes/country/[country].tsx";
+import * as $country_layout from "./routes/country/_layout.tsx";
 import * as $index from "./routes/index.tsx";
+
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
+    "./routes/_layout.tsx": $_layout,
+    "./routes/country/[country].tsx": $country_country_,
+    "./routes/country/_layout.tsx": $country_layout,
     "./routes/index.tsx": $index,
   },
-  islands: {
-  },
+  islands: {},
   baseUrl: import.meta.url,
 } satisfies Manifest;
 
